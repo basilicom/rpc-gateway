@@ -14,7 +14,7 @@ Developer info: [basilicom](http://basilicom.de/)
 
 ```php
     $rpc = new \RpcGateway\Gateway();
-    $rpc->setServiceClassNamespace('\Website\Rpc\Custom\\')
+    $rpc->setServiceClassNamespace('\Website\Rpc\Custom\\');
 ```
 
 ### Installation
