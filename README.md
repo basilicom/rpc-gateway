@@ -1,4 +1,4 @@
-Document Authentication Plugin
+RPC Gateway
 ================================================
 
 Developer info: [basilicom](http://basilicom.de/)
@@ -33,3 +33,43 @@ Developer info: [basilicom](http://basilicom.de/)
 ## License
 
 * BSD-3-Clause
+
+
+### Pimcore Controller Example
+```php
+<?php
+
+	use Pimcore\Config;
+
+	class RpcController extends \Website\Controller\Action
+	{
+
+		/**
+		 * @return void
+		 */
+		public function defaultAction()
+		{
+			$this->disableViewAutoRender();
+
+			try {
+
+				$gateway = new \RpcGateway\Gateway();
+				$gateway->setServiceClassNamespace('\Website\App\Rpc\Service\')
+				$gateway->setRequest($this->getRequest());
+				$gateway->setResponse($this->getResponse());
+				$gateway->dispatch();
+
+			} catch (\Exception $e) {
+
+				if (Config::getSystemConfig()->get('general')->debug) {
+					var_dump($e);
+					exit;
+				} else {
+					echo "NO METHOD";
+					die();
+				}
+			}
+		}
+	}
+
+```
