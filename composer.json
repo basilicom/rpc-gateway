@@ -1,0 +1,19 @@
+{
+    "name": "basilicom/rpc-gateway",
+    "description": "rpc gateway lib",
+    "type": "lib",
+    "license": "BSD-3-Clause",
+    "keywords": ["rpc"],
+    "homepage": "http://basilicom.de/",
+    "authors": [
+        {
+            "name": "basilicom Team",
+            "email": "info@basilicom.de",
+            "homepage": "http://basilicom.de/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
