@@ -13,10 +13,8 @@ Developer info: [basilicom](http://basilicom.de/)
 * For Example, your Service Class is \Website\Rpc\Custom\User.php:
 
 ```php
-
     $rpc = new \RpcGateway\Gateway();
     $rpc->setServiceClassNamespace('\Website\Rpc\Custom\\')
-
 ```
 
 ### Installation
@@ -59,7 +57,7 @@ Developer info: [basilicom](http://basilicom.de/)
 			try {
 
 				$gateway = new \RpcGateway\Gateway();
-				$gateway->setServiceClassNamespace('\Website\App\Rpc\Service\')
+				$gateway->setServiceClassNamespace('\Website\App\Rpc\Service\\')
 				$gateway->setRequest($this->getRequest());
 				$gateway->setResponse($this->getResponse());
 				$gateway->dispatch();
