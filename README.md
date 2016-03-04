@@ -12,7 +12,7 @@ Developer info: [basilicom](http://basilicom.de/)
 * if your service namespace ist not "\App\Rpc\Service", please don't forget to set your custom namespace.
 * For Example, your Service Class is \Website\Rpc\Custom\User.php:
 * $rpc = new \RpcGateway\Gateway();
-* $rpc->setServiceClassNamespace("\\Website\\Rpc\\Custom\\")
+* $rpc->setServiceClassNamespace('\Website\Rpc\Custom\\')
 
 ## Installation
 
