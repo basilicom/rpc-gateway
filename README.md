@@ -1,7 +1,7 @@
 Document Authentication Plugin
 ================================================
 
-Developer info: [Pimcore at basilicom](http://basilicom.de/en/pimcore)
+Developer info: [basilicom](http://basilicom.de/)
 
 ## Synopsis
 
@@ -9,15 +9,14 @@ Developer info: [Pimcore at basilicom](http://basilicom.de/en/pimcore)
 
 ## Code Example / Method of Operation
 
-* 
-
-## Motivation
-
-* 
+* if your service namespace ist not '\App\Rpc\Service', please don't forget to set your custom namespace.
+* For Example, your Service Class is \Website\Rpc\Custom\User.php:
+* $rpc = new \RpcGateway\Gateway();
+* $rpc->setServiceClassNamespace('\\Website\\Rpc\\Custom\\')
 
 ## Installation
 
-* 
+* just add '"basilicom/rpc-gateway": "dev-master"' to your composer '"require": {}'
 
 ## API Reference
 
