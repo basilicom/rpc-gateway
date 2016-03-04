@@ -1,4 +1,4 @@
-Document Authentication Plugin
+RPC Gateway
 ================================================
 
 Developer info: [basilicom](http://basilicom.de/)
