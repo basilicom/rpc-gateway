@@ -57,7 +57,7 @@ Developer info: [basilicom](http://basilicom.de/)
 			try {
 
 				$gateway = new \RpcGateway\Gateway();
-				$gateway->setServiceClassNamespace('\Website\App\Rpc\Service\')
+				$gateway->setServiceClassNamespace('\Website\App\Rpc\Service\\')
 				$gateway->setRequest($this->getRequest());
 				$gateway->setResponse($this->getResponse());
 				$gateway->dispatch();
