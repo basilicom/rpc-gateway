@@ -40,10 +40,6 @@ Developer info: [basilicom](http://basilicom.de/)
 <?php
 
 	use Pimcore\Config;
-	use Pimcore\File;
-	use Pimcore\Model\Asset\Folder;
-	use Pimcore\Model\Asset\Image;
-	use Website\Lib\Rpc\Gateway;
 
 	class RpcController extends \Website\Controller\Action
 	{
@@ -57,7 +53,8 @@ Developer info: [basilicom](http://basilicom.de/)
 
 			try {
 
-				$gateway = new Gateway();
+				$gateway = new \RpcGateway\Gateway();
+				$gateway->setServiceClassNamespace('\Website\App\Rpc\Service\')
 				$gateway->setRequest($this->getRequest());
 				$gateway->setResponse($this->getResponse());
 				$gateway->dispatch();
